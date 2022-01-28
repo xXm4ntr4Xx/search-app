@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-minimal",
+  "name": "my-new-site-gatsby",
   "version": "1.0.0",
   "private": true,
-  "description": "A Gatsby starter with no plugins and a single welcome page.",
-  "author": "Laurie Barth",
+  "description": "My New Site gatsby",
+  "author": "bladeyugo88",
   "keywords": [
     "gatsby"
   ],
@@ -14,9 +14,15 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
-  "license": "0BSD",
   "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/material": "^5.3.1",
     "gatsby": "^4.6.0",
+    "gatsby-plugin-image": "^2.6.0",
+    "gatsby-plugin-sharp": "^4.6.0",
+    "gatsby-source-filesystem": "^4.6.0",
+    "gatsby-transformer-sharp": "^4.6.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   }

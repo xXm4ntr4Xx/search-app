@@ -1,8 +1,14 @@
 module.exports = {
-    siteMetadata: {
-        siteUrl: `https://www.yourdomain.tld`,
+  siteMetadata: {
+      title: `My New Site gatsby`,
+    siteUrl: `https://www.yourdomain.tld`
+  },
+  plugins: ["gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      "name": "images",
+      "path": "./src/images/"
     },
-    plugins: [
-
-    ]
-}
+    __key: "images"
+  }]
+};

@@ -1,8 +1,6 @@
-
 // Step 1: Import React
-import  React,{useState,useEffect} from 'react'
-import { Link } from 'gatsby';
-import { container,navbar } from '../components/layout.module.css';
+import  React,{useState} from 'react'
+import { container, is_the_body, p} from '../components/layout.module.css';
 
 import Navigationbar from "./dashboard";
 // Step 2: Define your component
@@ -15,6 +13,7 @@ const Main = () => {
   const [lastEp,setLastEp] = useState('');
   const [language,setLanguage] = useState('');
   const [text,setText] = useState('');
+  const [link,setLink] = useState('');
 
 
 
@@ -40,6 +39,7 @@ const Main = () => {
       let firstEpisode = data[0].show.premiered
       let lastEpisode = data[0].show.ended
       let language = data[0].show.language
+      let site = data[0].show.officialSite
 
 
       console.log(data[0])
@@ -49,6 +49,7 @@ const Main = () => {
         setFirstEp(firstEpisode)
         setLastEp(lastEpisode)
         setLanguage(language)
+        setLink(site)
     }
   
     
@@ -58,9 +59,9 @@ const Main = () => {
     <div className={container}>
       <Navigationbar />
     </div>  
-    <main >
+    <main className={is_the_body}>
 
-      <div className={container}>
+      <div style={{backgroundColor: 'hsl(180, 2%, 80%)',textAlign: 'center',height:'auto'}}>
         <h1>Search Movie</h1>
         
           <input type='text' onChange={handleChange}/>
@@ -69,11 +70,12 @@ const Main = () => {
         
           <br></br>
           <br></br>
-          <img src={image}/>
+          <img src={image} alt='Tv-image'/>
           <p>Name : {title}</p>
           <p>First Episode : {firstEp}</p>
           <p>Last Episode : {lastEp}</p>
           <p>Language : {language}</p>
+          <p>Offical Site : <a href={link}>{link}</a></p>
         </div>
     </main>
     </>

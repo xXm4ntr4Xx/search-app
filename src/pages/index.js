@@ -1,6 +1,6 @@
 import * as React from "react";
 import Navigationbar from "./dashboard";
-import { container,navbar} from '../components/layout.module.css';
+import { container,navbar,is_the_body} from '../components/layout.module.css';
 import { StaticImage } from 'gatsby-plugin-image'
 
 
@@ -8,7 +8,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 // markup
 const IndexPage = () => {
   return (
-    <div >
+    <div className={is_the_body}>
       <div className={container}>
         <Navigationbar className={navbar}/>
      

@@ -20,19 +20,19 @@ const Main = () => {
   //action function
 
   function handleChange(e){
-    console.log(e.target.value)
     setText(e.target.value)
 }
-
-
+    let clear = (e) => e.target.value='';
 
     // Update the document title using the browser API
-    async function searchImage(e){
-     
+    async function searchImage(){
+     if(!text){
+       alert('no name found')
+       return false
+     }else{
       let response = await fetch(`https://api.tvmaze.com/search/shows?q=${text}`)
       let data = await response.json();
 
-      e.target.value='';
 
       let filmName = data[0].show.name;
       let filmImage = data[0].show.image.medium
@@ -42,7 +42,7 @@ const Main = () => {
       let site = data[0].show.officialSite
 
 
-      console.log(data[0])
+      // console.log(data[0])
         
         setImage(filmImage)
         setTitle(filmName)
@@ -50,6 +50,7 @@ const Main = () => {
         setLastEp(lastEpisode)
         setLanguage(language)
         setLink(site)
+     }
     }
   
     
@@ -64,8 +65,8 @@ const Main = () => {
       <div style={{backgroundColor: 'hsl(180, 2%, 80%)',textAlign: 'center',height:'auto'}}>
         <h1>Search Movie</h1>
         
-          <input type='text' onChange={handleChange}/>
-          <button type='submit' onClick={searchImage}> Search</button>
+          <input type='text' onChange={handleChange} onClick={clear} />
+          <button type='click' onClick={searchImage} > Search</button>
         
         
           <br></br>

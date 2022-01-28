@@ -13,7 +13,7 @@ const IndexPage = () => {
         <Navigationbar className={navbar}/>
      
 
-    <h1 >Thi is the firt example of website with gatsby</h1>
+    <h1 >Search your favourite TV show</h1>
     <StaticImage
         alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
         src="https://miro.medium.com/max/696/1*JXB8i6O1Fq-rIaBOSJQi5g.png"

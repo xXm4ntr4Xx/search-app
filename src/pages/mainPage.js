@@ -6,7 +6,7 @@ import Navigationbar from "./dashboard";
 // Step 2: Define your component
 const Main = () => {
 
-
+// store all api element
   const [image,setImage] = useState('');
   const [title,setTitle] = useState('');
   const [firstEp,setFirstEp] = useState('');
@@ -17,11 +17,12 @@ const Main = () => {
 
 
 
-  //action function
+  //target input function
 
   function handleChange(e){
     setText(e.target.value)
 }
+  //clearing the input text after a submit
     let clear = (e) => e.target.value='';
 
     // Update the document title using the browser API
@@ -66,7 +67,7 @@ const Main = () => {
         <h1>Search Movie</h1>
         
           <input type='text' onChange={handleChange} onClick={clear} />
-          <button type='click' onClick={searchImage} > Search</button>
+          <button type='click' onClick={searchImage}> Search</button>
         
         
           <br></br>

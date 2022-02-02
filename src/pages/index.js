@@ -15,7 +15,7 @@ const IndexPage = () => {
 
     <h1 >Search your favourite TV show</h1>
     <StaticImage
-        alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
+        alt="Just a Picture"
         src="https://miro.medium.com/max/696/1*JXB8i6O1Fq-rIaBOSJQi5g.png"
       />
 

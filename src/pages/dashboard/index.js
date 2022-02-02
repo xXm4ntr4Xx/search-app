@@ -16,15 +16,6 @@ export default function Navigationbar() {
 
   return (
     <div>
-      <Button
-        id="basic-button"
-        aria-controls={open ? 'basic-menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
-        onClick={handleClick}
-      >
-        Dashboard
-      </Button>
       <Button>
         <Link to="/">Home</Link>
       </Button>

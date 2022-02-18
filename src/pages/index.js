@@ -1,30 +1,27 @@
-import * as React from "react";
-import Navigationbar from "./dashboard";
-import { container,navbar,is_the_body} from '../components/layout.module.css';
-import { StaticImage } from 'gatsby-plugin-image'
+import React from "react";
+import Navigationbar from './navbar.js';
+import { StaticImage } from 'gatsby-plugin-image';
+import '../styles/index.css'
 
 
 
 // markup
 const IndexPage = () => {
   return (
-    <div className={is_the_body}>
-      <div className={container}>
-        <Navigationbar className={navbar}/>
-     
 
-    <h1 >Search your favourite TV show</h1>
+    <body>
+      <div className='container-index'>
+        <Navigationbar />
+    <h1 className="header1">Search your favourite movie/anime</h1>
+    <br/>
     <StaticImage
         alt="Just a Picture"
-        src="https://miro.medium.com/max/696/1*JXB8i6O1Fq-rIaBOSJQi5g.png"
+        src="https://as1.ftcdn.net/v2/jpg/02/93/13/34/1000_F_293133495_Adpt8Hupr2PESBNsMEiil781StAyWCMX.jpg"
       />
-
-      </div>
       
-
-     </div> 
-
-     
+     </div>    
+    </body>
+    
   )
 }
 

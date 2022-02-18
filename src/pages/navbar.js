@@ -1,30 +1,30 @@
-import * as React from 'react';
-import Button from '@mui/material/Button';
+import  React from 'react';
+
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'gatsby';
+import '../styles/navbar.css';
 
-export default function Navigationbar() {
+function Navigationbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
+
+  
   const handleClose = () => {
     setAnchorEl(null);
   };
 
   return (
     <div>
-      <Button>
+      <a>
         <Link to="/">Home</Link>
-      </Button>
-
-      <Button>
-        <Link to="/mainPage">Movie Search</Link>
-      </Button>
+      </a>
+        <br/>
+      <a>
+        <Link to="/main">Movie Search</Link>
+      </a>
       
-      <Menu
+      {/* <Menu
         id="basic-menu"
         anchorEl={anchorEl}
         open={open}
@@ -34,7 +34,9 @@ export default function Navigationbar() {
         }}
       >
         <MenuItem onClick={handleClose}>Profile</MenuItem>
-      </Menu>
+      </Menu> */}
     </div>
   );
 }
+
+export default Navigationbar;

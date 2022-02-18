@@ -70,7 +70,7 @@ const Main = () => {
         
           
          <div>
-          <img className='image-search' src={image} alt='Tv-image'/>
+          <img className='image-search' src={image} alt='Tv-result'/>
           <p>Name : {title}</p>
           <p>First Episode : {firstEp}</p>
           <p>Last Episode : {lastEp}</p>

@@ -15,7 +15,7 @@ const IndexPage = () => {
     <h1 className="header1">Search your favourite movie/anime</h1>
     <br/>
     <StaticImage
-        alt="Just a Picture"
+        alt="Just something"
         src="https://as1.ftcdn.net/v2/jpg/02/93/13/34/1000_F_293133495_Adpt8Hupr2PESBNsMEiil781StAyWCMX.jpg"
       />
       

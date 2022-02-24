@@ -75,7 +75,7 @@ const Main = () => {
           <p>First Episode : {firstEp}</p>
           <p>Last Episode : {lastEp}</p>
           <p>Language : {language}</p>
-          <p>Offical Site : <a href={link}>{link}</a></p>
+          <p>Offical Site : <a href={link}>{link?link:"No link available"}</a></p>
          </div>   
     </div> 
       </body>

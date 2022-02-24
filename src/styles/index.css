@@ -1,13 +1,11 @@
 *{
   margin:0;
-}
-body{
   
 }
 
   .header1{
-    color: antiquewhite;
-    
+    color: rgb(44, 44, 43);
+    margin: 5%;
   }
   p{
     font-size: 40px;
